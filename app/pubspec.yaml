@@ -1,0 +1,50 @@
+name: sat_plantscan
+description: SAT-PlantScan — AI-powered tropical plant disease diagnosis by SolAgriTech.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  go_router: ^14.2.7
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  get_it: ^7.7.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.4
+  camera: ^0.11.0+2
+  image_picker: ^1.1.2
+  image: ^4.2.0
+  tflite_flutter: ^0.11.0
+  intl: ^0.20.2
+  uuid: ^4.5.1
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  bloc_test: ^9.1.7
+  mocktail: ^1.0.4
+  flutter_launcher_icons: ^0.14.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/logo/logo.jpg
+  adaptive_icon_background: "#1B5E20"
+  adaptive_icon_foreground: assets/logo/logo.jpg
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo/
+    - assets/knowledge/crops/
+    - assets/models/

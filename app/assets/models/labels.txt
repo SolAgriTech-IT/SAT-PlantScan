@@ -1,0 +1,10 @@
+cassava_mosaic_disease
+cassava_brown_streak
+cassava_bacterial_blight
+anthracnose
+cercosporiosis
+root_rot
+chlorosis
+leaf_senescence
+pest_damage
+healthy

@@ -1,0 +1,333 @@
+{
+  "cropId": "cassava",
+  "initialScore": 0.08,
+  "questions": [
+    {
+      "id": "whiteflies",
+      "type": "biotic",
+      "text": { "fr": "Présence de mouches blanches ?", "en": "Presence of whiteflies?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "cassava_mosaic_disease": 0.35,
+            "cassava_brown_streak": 0.25,
+            "whitefly_infestation": 0.45
+          },
+          "reduce": { "healthy": 0.4 }
+        },
+        "no": {
+          "reduce": {
+            "cassava_mosaic_disease": 0.15,
+            "cassava_brown_streak": 0.1,
+            "whitefly_infestation": 0.35
+          }
+        }
+      }
+    },
+    {
+      "id": "mealybugs",
+      "type": "biotic",
+      "text": { "fr": "Présence de cochenilles ?", "en": "Presence of mealybugs?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "mealybug_infestation": 0.5 },
+          "reduce": { "healthy": 0.3 }
+        },
+        "no": { "reduce": { "mealybug_infestation": 0.4 } }
+      }
+    },
+    {
+      "id": "mites",
+      "type": "biotic",
+      "text": { "fr": "Présence d'acariens ?", "en": "Presence of mites?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "mite_infestation": 0.5 },
+          "reduce": { "healthy": 0.25 }
+        },
+        "no": { "reduce": { "mite_infestation": 0.4 } }
+      }
+    },
+    {
+      "id": "aphids",
+      "type": "biotic",
+      "text": { "fr": "Présence de pucerons ?", "en": "Presence of aphids?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "thrips_damage": 0.15, "cassava_bacterial_blight": 0.1 },
+          "reduce": { "healthy": 0.15 }
+        },
+        "no": {}
+      }
+    },
+    {
+      "id": "galleries",
+      "type": "biotic",
+      "text": { "fr": "Présence de galeries (feuilles/tiges) ?", "en": "Presence of galleries (leaves/stems)?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "thrips_damage": 0.25, "mite_infestation": 0.15 },
+          "reduce": { "healthy": 0.2 }
+        },
+        "no": {}
+      }
+    },
+    {
+      "id": "mosaic_pattern",
+      "type": "biotic",
+      "text": {
+        "fr": "Motifs de mosaïque (vert clair/foncé) sur les feuilles ?",
+        "en": "Mosaic patterns (light/dark green) on leaves?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "cassava_mosaic_disease": 0.45 },
+          "reduce": { "healthy": 0.35, "leaf_senescence": 0.2 }
+        },
+        "no": { "reduce": { "cassava_mosaic_disease": 0.25 } }
+      }
+    },
+    {
+      "id": "stem_streaks",
+      "type": "biotic",
+      "text": {
+        "fr": "Stries brunes sur tiges ou racines ?",
+        "en": "Brown streaks on stems or roots?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "cassava_brown_streak": 0.45, "root_rot": 0.15 },
+          "reduce": { "healthy": 0.35 }
+        },
+        "no": { "reduce": { "cassava_brown_streak": 0.25 } }
+      }
+    },
+    {
+      "id": "wilt_angular_spots",
+      "type": "biotic",
+      "text": {
+        "fr": "Flétrissement ou taches angulaires huileuses ?",
+        "en": "Wilting or angular oily leaf spots?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "cassava_bacterial_blight": 0.45 },
+          "reduce": { "healthy": 0.3 }
+        },
+        "no": { "reduce": { "cassava_bacterial_blight": 0.25 } }
+      }
+    },
+    {
+      "id": "root_rot_symptoms",
+      "type": "biotic",
+      "text": {
+        "fr": "Racines molles, brunes ou malodorantes ?",
+        "en": "Soft, brown or foul-smelling roots?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "root_rot": 0.5, "cassava_brown_streak": 0.15 },
+          "reduce": { "healthy": 0.4 }
+        },
+        "no": { "reduce": { "root_rot": 0.35 } }
+      }
+    },
+    {
+      "id": "high_altitude",
+      "type": "abiotic",
+      "text": { "fr": "Altitude élevée ?", "en": "High altitude?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": { "boost": { "cassava_brown_streak": 0.15 } },
+        "no": {}
+      }
+    },
+    {
+      "id": "humid_zone",
+      "type": "abiotic",
+      "text": { "fr": "Zone humide ?", "en": "Humid zone?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "anthracnose": 0.2,
+            "cercosporiosis": 0.2,
+            "cassava_bacterial_blight": 0.15,
+            "root_rot": 0.2
+          }
+        },
+        "no": { "boost": { "mite_infestation": 0.1 } }
+      }
+    },
+    {
+      "id": "heavy_rain",
+      "type": "abiotic",
+      "text": { "fr": "Fortes pluies récentes ?", "en": "Recent heavy rains?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "cassava_bacterial_blight": 0.25,
+            "anthracnose": 0.2,
+            "cercosporiosis": 0.2,
+            "root_rot": 0.15
+          }
+        },
+        "no": {}
+      }
+    },
+    {
+      "id": "long_sun",
+      "type": "abiotic",
+      "text": {
+        "fr": "Longues périodes ensoleillées / sécheresse ?",
+        "en": "Long sunny periods / drought?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "leaf_senescence": 0.3,
+            "mite_infestation": 0.2,
+            "whitefly_infestation": 0.15,
+            "chlorosis": 0.15
+          }
+        },
+        "no": {}
+      }
+    },
+    {
+      "id": "poor_soil",
+      "type": "abiotic",
+      "text": { "fr": "Sol pauvre ?", "en": "Poor soil?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "chlorosis": 0.35,
+            "cassava_brown_streak": 0.15,
+            "leaf_senescence": 0.15
+          },
+          "reduce": { "healthy": 0.2 }
+        },
+        "no": { "boost": { "healthy": 0.1 } }
+      }
+    },
+    {
+      "id": "steep_slope",
+      "type": "abiotic",
+      "text": { "fr": "Pente importante ?", "en": "Steep slope?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "chlorosis": 0.2, "leaf_senescence": 0.15 },
+          "reduce": { "root_rot": 0.1 }
+        },
+        "no": {}
+      }
+    },
+    {
+      "id": "dry_season",
+      "type": "abiotic",
+      "text": { "fr": "Saison sèche ?", "en": "Dry season?" },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": {
+            "whitefly_infestation": 0.2,
+            "mite_infestation": 0.2,
+            "mealybug_infestation": 0.15,
+            "leaf_senescence": 0.2
+          }
+        },
+        "no": {
+          "boost": {
+            "cassava_bacterial_blight": 0.1,
+            "anthracnose": 0.1,
+            "cercosporiosis": 0.1
+          }
+        }
+      }
+    },
+    {
+      "id": "uniform_green",
+      "type": "biotic",
+      "text": {
+        "fr": "Feuillage vert uniforme sans taches ni déformation ?",
+        "en": "Uniform green foliage without spots or distortion?"
+      },
+      "options": [
+        { "value": "yes", "label": { "fr": "Oui", "en": "Yes" } },
+        { "value": "no", "label": { "fr": "Non", "en": "No" } }
+      ],
+      "effects": {
+        "yes": {
+          "boost": { "healthy": 0.5 },
+          "reduce": {
+            "cassava_mosaic_disease": 0.2,
+            "cassava_brown_streak": 0.15,
+            "cassava_bacterial_blight": 0.15
+          }
+        },
+        "no": { "reduce": { "healthy": 0.35 } }
+      }
+    }
+  ]
+}

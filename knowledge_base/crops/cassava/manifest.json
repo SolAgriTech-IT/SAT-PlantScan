@@ -1,0 +1,32 @@
+{
+  "id": "cassava",
+  "scientificName": "Manihot esculenta Crantz",
+  "displayName": {
+    "fr": "Manioc",
+    "en": "Cassava"
+  },
+  "description": {
+    "fr": "Culture vivrière tropicale majeure, sensible aux viroses, bactéries, champignons et ravageurs.",
+    "en": "Major tropical staple crop, susceptible to viruses, bacteria, fungi and pests."
+  },
+  "iconAsset": "assets/crops/cassava.png",
+  "enabled": true,
+  "categories": [
+    { "id": "viral", "label": { "fr": "Viroses", "en": "Viral diseases" } },
+    { "id": "bacterial", "label": { "fr": "Bactérios", "en": "Bacterial diseases" } },
+    { "id": "fungal", "label": { "fr": "Maladies fongiques", "en": "Fungal diseases" } },
+    { "id": "pest", "label": { "fr": "Ravageurs", "en": "Pests" } },
+    { "id": "nutritional", "label": { "fr": "Désordres nutritionnels", "en": "Nutritional disorders" } },
+    { "id": "abiotic", "label": { "fr": "Stress abiotiques", "en": "Abiotic stresses" } },
+    { "id": "healthy", "label": { "fr": "Plante saine", "en": "Healthy plant" } }
+  ],
+  "diseasesFile": "diseases.json",
+  "questionnaireFile": "questionnaire.json",
+  "references": [
+    "Ouvrages/Field problems in cassava.pdf",
+    "Ouvrages/LeggandAlvarez-DiseasesAffectingCassava-2017.pdf",
+    "Ouvrages/Disease-control-IPM-Guide-Cassava.pdf",
+    "Ouvrages/Save and grow Cassava.pdf",
+    "https://www.fao.org/agriculture/crops/thematic-sitemap/theme/pests/cassava-diseases/en/"
+  ]
+}

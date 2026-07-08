@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SAT-PlantScan Disease Sheet",
+  "type": "object",
+  "required": [
+    "id",
+    "cropId",
+    "category",
+    "scientificName",
+    "commonName",
+    "affectedOrgans",
+    "earlySymptoms",
+    "advancedSymptoms",
+    "causalAgents",
+    "vectors",
+    "favorableFactors",
+    "climateConditions",
+    "prevention",
+    "control",
+    "severityLevel",
+    "photoPaths",
+    "references",
+    "recommendedCaptureTargets"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "cropId": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": [
+        "viral",
+        "bacterial",
+        "fungal",
+        "phytoplasma",
+        "nematode",
+        "pest",
+        "nutritional",
+        "abiotic",
+        "healthy"
+      ]
+    },
+    "scientificName": { "$ref": "#/definitions/localizedString" },
+    "commonName": { "$ref": "#/definitions/localizedString" },
+    "affectedOrgans": {
+      "type": "object",
+      "properties": {
+        "fr": { "type": "array", "items": { "type": "string" } },
+        "en": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "earlySymptoms": { "$ref": "#/definitions/localizedString" },
+    "advancedSymptoms": { "$ref": "#/definitions/localizedString" },
+    "causalAgents": { "$ref": "#/definitions/localizedString" },
+    "vectors": { "$ref": "#/definitions/localizedString" },
+    "favorableFactors": { "$ref": "#/definitions/localizedString" },
+    "climateConditions": { "$ref": "#/definitions/localizedString" },
+    "prevention": {
+      "type": "object",
+      "properties": {
+        "fr": { "type": "array", "items": { "type": "string" } },
+        "en": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "control": {
+      "type": "object",
+      "properties": {
+        "fr": { "type": "array", "items": { "type": "string" } },
+        "en": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "severityLevel": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "photoPaths": { "type": "array", "items": { "type": "string" } },
+    "references": { "type": "array", "items": { "type": "string" } },
+    "recommendedCaptureTargets": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["leaf", "leaflet", "stem", "root"] }
+    },
+    "datasetFolder": { "type": "string" },
+    "mlClassId": { "type": "integer" }
+  },
+  "definitions": {
+    "localizedString": {
+      "type": "object",
+      "required": ["fr", "en"],
+      "properties": {
+        "fr": { "type": "string" },
+        "en": { "type": "string" }
+      }
+    }
+  }
+}

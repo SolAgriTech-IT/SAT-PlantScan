@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ml/artifacts/
+
+# Flutter / Dart
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/.packages
+app/build/
+app/.pub-cache/
+app/.pub/
+app/**/Generated.xcconfig
+app/**/flutter_export_environment.sh
+
+# Android
+app/android/local.properties
+app/android/.gradle/
+app/android/captures/
+app/android/key.properties
+*.jks
+*.keystore
+
+# iOS
+app/ios/Pods/
+app/ios/.symlinks/
+app/ios/Flutter/Flutter.framework
+app/ios/Flutter/Flutter.podspec
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large generated model binaries (train locally)
+app/assets/models/*.tflite
+
+# Secrets
+.env
+*.pem

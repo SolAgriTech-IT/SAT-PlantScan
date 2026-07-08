@@ -1,0 +1,7 @@
+[
+  {
+    "id": "cassava",
+    "manifest": "crops/cassava/manifest.json",
+    "enabled": true
+  }
+]

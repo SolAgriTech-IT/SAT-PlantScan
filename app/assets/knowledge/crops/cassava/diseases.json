@@ -1,0 +1,913 @@
+[
+  {
+    "id": "cassava_mosaic_disease",
+    "cropId": "cassava",
+    "category": "viral",
+    "scientificName": {
+      "fr": "Maladie de la mosaïque du manioc (CMD)",
+      "en": "Cassava Mosaic Disease (CMD)"
+    },
+    "commonName": {
+      "fr": "Mosaïque africaine du manioc",
+      "en": "African Cassava Mosaic"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles", "Pousses"],
+      "en": ["Leaves", "Leaflets", "Shoots"]
+    },
+    "earlySymptoms": {
+      "fr": "Motifs irréguliers vert clair et vert foncé sur les feuilles jeunes, légère déformation des folioles.",
+      "en": "Irregular light and dark green mosaic patterns on young leaves, slight leaflet distortion."
+    },
+    "advancedSymptoms": {
+      "fr": "Mosaïque généralisée, réduction de la taille foliaire, nanisme, baisse drastique du rendement.",
+      "en": "Generalized mosaic, reduced leaf size, stunting, severe yield loss."
+    },
+    "causalAgents": {
+      "fr": "Begomovirus (Cassava mosaic begomoviruses), transmis par Bemisia tabaci.",
+      "en": "Begomoviruses (Cassava mosaic begomoviruses), transmitted by Bemisia tabaci whiteflies."
+    },
+    "vectors": {
+      "fr": "Mouches blanches (Bemisia tabaci).",
+      "en": "Whiteflies (Bemisia tabaci)."
+    },
+    "favorableFactors": {
+      "fr": "Plants infectés voisins, boutures contaminées, forte pression de mouches blanches, variétés sensibles.",
+      "en": "Infected neighboring plants, contaminated cuttings, high whitefly pressure, susceptible varieties."
+    },
+    "climateConditions": {
+      "fr": "Saison sèche avec températures chaudes favorisant les populations de mouches blanches.",
+      "en": "Dry season with warm temperatures favoring whitefly populations."
+    },
+    "prevention": {
+      "fr": [
+        "Utiliser des boutures saines certifiées.",
+        "Employer des variétés résistantes ou tolérantes.",
+        "Assurer une bonne préparation et fertilisation du sol.",
+        "Effectuer un sarclage régulier pour limiter les repousses infectées."
+      ],
+      "en": [
+        "Use certified healthy cuttings.",
+        "Plant resistant or tolerant varieties.",
+        "Ensure proper soil preparation and fertilization.",
+        "Regular weeding to remove infected regrowth."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Arracher et détruire les plants infectés.",
+        "Éviter le déplacement de boutures d'une zone infestée à une autre.",
+        "Surveiller et réduire les populations de mouches blanches si nécessaire."
+      ],
+      "en": [
+        "Uproot and destroy infected plants.",
+        "Avoid moving cuttings from infested to clean areas.",
+        "Monitor and reduce whitefly populations when necessary."
+      ]
+    },
+    "severityLevel": "critical",
+    "photoPaths": ["Cultures/Cassava/01-VIROSES/MOSAIQUE AFRICAINE"],
+    "references": [
+      "Ouvrages/LeggandAlvarez-DiseasesAffectingCassava-2017.pdf",
+      "Ouvrages/Field problems in cassava.pdf",
+      "https://www.fao.org/agriculture/crops/thematic-sitemap/theme/pests/cassava-diseases/en/"
+    ],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "01-VIROSES/MOSAIQUE AFRICAINE",
+    "mlClassId": 0
+  },
+  {
+    "id": "cassava_brown_streak",
+    "cropId": "cassava",
+    "category": "viral",
+    "scientificName": {
+      "fr": "Striure brune du manioc (CBSD)",
+      "en": "Cassava Brown Streak Disease (CBSD)"
+    },
+    "commonName": {
+      "fr": "Striure brune",
+      "en": "Brown streak"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Tiges", "Racines", "Tubercules"],
+      "en": ["Leaves", "Stems", "Roots", "Tubers"]
+    },
+    "earlySymptoms": {
+      "fr": "Chlorose en V ou en Y sur les feuilles matures, légères taches brunes sur les tiges.",
+      "en": "V- or Y-shaped chlorosis on mature leaves, slight brown streaks on stems."
+    },
+    "advancedSymptoms": {
+      "fr": "Stries brunes sur tiges et racines, pourriture nécrotique des tubercules, perte de qualité amylacée.",
+      "en": "Brown streaks on stems and roots, necrotic rot of tubers, loss of starch quality."
+    },
+    "causalAgents": {
+      "fr": "Ipomovirus (Cassava brown streak virus), transmis par Bemisia tabaci et boutures infectées.",
+      "en": "Ipomovirus (Cassava brown streak virus), transmitted by Bemisia tabaci and infected cuttings."
+    },
+    "vectors": {
+      "fr": "Mouches blanches (Bemisia tabaci), boutures contaminées.",
+      "en": "Whiteflies (Bemisia tabaci), contaminated cuttings."
+    },
+    "favorableFactors": {
+      "fr": "Variétés sensibles, boutures infectées, sols pauvres, plantation tardive, pression de vecteurs.",
+      "en": "Susceptible varieties, infected cuttings, poor soils, late planting, vector pressure."
+    },
+    "climateConditions": {
+      "fr": "Zones humides et altitudes modérées à élevées où la maladie est historiquement répandue.",
+      "en": "Humid zones and moderate to high altitudes where the disease is historically prevalent."
+    },
+    "prevention": {
+      "fr": [
+        "Utiliser uniquement des boutures provenant de plants sains.",
+        "Préférer les variétés résistantes.",
+        "Éviter les sols pauvres et planter précocement.",
+        "Inspecter régulièrement les parcelles."
+      ],
+      "en": [
+        "Use only cuttings from healthy plants.",
+        "Prefer resistant varieties.",
+        "Avoid poor soils and plant early.",
+        "Inspect fields regularly."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Aucun pesticide n'est efficace contre les virus.",
+        "Éliminer les plants malades dès les premiers symptômes.",
+        "Ne pas replanter de boutures issues de plants suspects."
+      ],
+      "en": [
+        "No pesticide is effective against viruses.",
+        "Remove diseased plants at first symptoms.",
+        "Do not replant cuttings from suspect plants."
+      ]
+    },
+    "severityLevel": "critical",
+    "photoPaths": ["Cultures/Cassava/01-VIROSES/STRITUIRE BRUNE"],
+    "references": [
+      "Ouvrages/LeggandAlvarez-DiseasesAffectingCassava-2017.pdf",
+      "Ouvrages/Field problems in cassava.pdf"
+    ],
+    "recommendedCaptureTargets": ["leaf", "stem", "root"],
+    "datasetFolder": "01-VIROSES/STRITUIRE BRUNE",
+    "mlClassId": 1
+  },
+  {
+    "id": "cassava_bacterial_blight",
+    "cropId": "cassava",
+    "category": "bacterial",
+    "scientificName": {
+      "fr": "Brûlure bactérienne du manioc (CBB)",
+      "en": "Cassava Bacterial Blight (CBB)"
+    },
+    "commonName": {
+      "fr": "Brûlure bactérienne",
+      "en": "Bacterial blight"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles", "Tiges", "Petioles"],
+      "en": ["Leaves", "Leaflets", "Stems", "Petioles"]
+    },
+    "earlySymptoms": {
+      "fr": "Taches angulaires huileuses sur feuilles, wilting localisé, gouttelettes bactériennes au petit matin.",
+      "en": "Angular oily leaf spots, localized wilting, bacterial droplets in early morning."
+    },
+    "advancedSymptoms": {
+      "fr": "Flétrissement généralisé, chancres sur tiges, défoliation, nécrose des tissus vasculaires.",
+      "en": "Generalized wilting, stem cankers, defoliation, vascular tissue necrosis."
+    },
+    "causalAgents": {
+      "fr": "Xanthomonas axonopodis pv. manihotis.",
+      "en": "Xanthomonas axonopodis pv. manihotis."
+    },
+    "vectors": {
+      "fr": "Pluie, outils contaminés, boutures infectées, vent avec éclaboussures.",
+      "en": "Rain splash, contaminated tools, infected cuttings, wind-driven splash."
+    },
+    "favorableFactors": {
+      "fr": "Fortes pluies, humidité élevée, blessures mécaniques, plantation dense, variétés sensibles.",
+      "en": "Heavy rains, high humidity, mechanical wounds, dense planting, susceptible varieties."
+    },
+    "climateConditions": {
+      "fr": "Saison pluvieuse chaude avec forte humidité foliaire.",
+      "en": "Warm rainy season with high leaf wetness."
+    },
+    "prevention": {
+      "fr": [
+        "Utiliser des boutures saines.",
+        "Éviter les blessures lors des opérations culturales.",
+        "Assurer une bonne aération entre plants.",
+        "Rotation et assainissement des outils."
+      ],
+      "en": [
+        "Use healthy cuttings.",
+        "Avoid wounds during field operations.",
+        "Ensure good plant spacing for airflow.",
+        "Rotate crops and sanitize tools."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Arracher les plants très infectés.",
+        "Limiter la circulation dans la parcelle humide.",
+        "Appliquer des mesures phytosanitaires recommandées localement si disponibles."
+      ],
+      "en": [
+        "Uproot severely infected plants.",
+        "Limit field traffic when wet.",
+        "Apply locally recommended phytosanitary measures when available."
+      ]
+    },
+    "severityLevel": "high",
+    "photoPaths": ["Cultures/Cassava/02-BACTERIOSES"],
+    "references": [
+      "Ouvrages/Disease-control-IPM-Guide-Cassava.pdf",
+      "Ouvrages/Field problems in cassava.pdf"
+    ],
+    "recommendedCaptureTargets": ["leaf", "leaflet", "stem"],
+    "datasetFolder": "02-BACTERIOSES",
+    "mlClassId": 2
+  },
+  {
+    "id": "anthracnose",
+    "cropId": "cassava",
+    "category": "fungal",
+    "scientificName": {
+      "fr": "Anthracnose du manioc",
+      "en": "Cassava anthracnose"
+    },
+    "commonName": {
+      "fr": "Anthracnose",
+      "en": "Anthracnose"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Tiges", "Pétioles"],
+      "en": ["Leaves", "Stems", "Petioles"]
+    },
+    "earlySymptoms": {
+      "fr": "Petites taches brunes ou noires sur feuilles et tiges, lésions circulaires avec marge foncée.",
+      "en": "Small brown or black spots on leaves and stems, circular lesions with dark margins."
+    },
+    "advancedSymptoms": {
+      "fr": "Chancres sur tiges, chute prématurée des feuilles, affaiblissement général du plant.",
+      "en": "Stem cankers, premature leaf drop, general plant weakening."
+    },
+    "causalAgents": {
+      "fr": "Colletotrichum gloeosporioides f. sp. manihotis.",
+      "en": "Colletotrichum gloeosporioides f. sp. manihotis."
+    },
+    "vectors": {
+      "fr": "Pluie, vent, outils, résidus infectés.",
+      "en": "Rain, wind, tools, infected crop residues."
+    },
+    "favorableFactors": {
+      "fr": "Humidité élevée, pluies fréquentes, densité de plantation, blessures.",
+      "en": "High humidity, frequent rains, planting density, wounds."
+    },
+    "climateConditions": {
+      "fr": "Zones humides avec pluies régulières.",
+      "en": "Humid zones with regular rainfall."
+    },
+    "prevention": {
+      "fr": [
+        "Choisir des variétés tolérantes.",
+        "Maintenir une bonne aération.",
+        "Éliminer les débris végétaux infectés."
+      ],
+      "en": [
+        "Choose tolerant varieties.",
+        "Maintain good airflow.",
+        "Remove infected plant debris."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Retirer les parties fortement atteintes.",
+        "Appliquer des fongicides recommandés localement si nécessaire."
+      ],
+      "en": [
+        "Remove severely affected parts.",
+        "Apply locally recommended fungicides if necessary."
+      ]
+    },
+    "severityLevel": "medium",
+    "photoPaths": ["Cultures/Cassava/03-MALADIES_CRYPTOGAMIQUES/ANTHRACNOSE"],
+    "references": ["Ouvrages/Field problems in cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "stem"],
+    "datasetFolder": "03-MALADIES_CRYPTOGAMIQUES/ANTHRACNOSE",
+    "mlClassId": 3
+  },
+  {
+    "id": "cercosporiosis",
+    "cropId": "cassava",
+    "category": "fungal",
+    "scientificName": {
+      "fr": "Cercosporiose du manioc",
+      "en": "Cassava cercosporiosis"
+    },
+    "commonName": {
+      "fr": "Cercosporiose",
+      "en": "Cercosporiosis"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles"],
+      "en": ["Leaves", "Leaflets"]
+    },
+    "earlySymptoms": {
+      "fr": "Petites taches circulaires brunes sur folioles, centre gris clair.",
+      "en": "Small circular brown spots on leaflets with light gray centers."
+    },
+    "advancedSymptoms": {
+      "fr": "Coalescence des taches, jaunissement, chute des feuilles, réduction photosynthétique.",
+      "en": "Spot coalescence, yellowing, leaf drop, reduced photosynthesis."
+    },
+    "causalAgents": {
+      "fr": "Cercospora henningsii.",
+      "en": "Cercospora henningsii."
+    },
+    "vectors": {
+      "fr": "Spores dispersées par pluie et vent.",
+      "en": "Spores dispersed by rain and wind."
+    },
+    "favorableFactors": {
+      "fr": "Humidité foliaire prolongée, plantation dense, carences nutritionnelles.",
+      "en": "Prolonged leaf wetness, dense planting, nutritional deficiencies."
+    },
+    "climateConditions": {
+      "fr": "Saison pluvieuse avec humidité persistante.",
+      "en": "Rainy season with persistent humidity."
+    },
+    "prevention": {
+      "fr": [
+        "Fertiliser correctement pour renforcer la vigueur.",
+        "Espacer les plants.",
+        "Utiliser des variétés tolérantes."
+      ],
+      "en": [
+        "Fertilize properly to strengthen vigor.",
+        "Space plants adequately.",
+        "Use tolerant varieties."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Retirer les feuilles très infectées.",
+        "Appliquer des fongicides si recommandés localement."
+      ],
+      "en": [
+        "Remove heavily infected leaves.",
+        "Apply fungicides if locally recommended."
+      ]
+    },
+    "severityLevel": "medium",
+    "photoPaths": ["Cultures/Cassava/03-MALADIES_CRYPTOGAMIQUES/CERCOSPORIOSE"],
+    "references": ["Ouvrages/Field problems in cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "03-MALADIES_CRYPTOGAMIQUES/CERCOSPORIOSE",
+    "mlClassId": 4
+  },
+  {
+    "id": "root_rot",
+    "cropId": "cassava",
+    "category": "fungal",
+    "scientificName": {
+      "fr": "Pourriture des racines du manioc",
+      "en": "Cassava root rot"
+    },
+    "commonName": {
+      "fr": "Pourriture racinaire",
+      "en": "Root rot"
+    },
+    "affectedOrgans": {
+      "fr": ["Racines", "Tubercules", "Base des tiges"],
+      "en": ["Roots", "Tubers", "Stem base"]
+    },
+    "earlySymptoms": {
+      "fr": "Ramollissement localisé des racines, coloration brune, mauvaise croissance.",
+      "en": "Localized root softening, brown discoloration, poor growth."
+    },
+    "advancedSymptoms": {
+      "fr": "Pourriture nécrotique étendue, odeur fétide, tubercules non commercialisables.",
+      "en": "Extensive necrotic rot, foul odor, unmarketable tubers."
+    },
+    "causalAgents": {
+      "fr": "Champignons telluriques (Botryodiplodia, Fusarium, Rosellinia spp.).",
+      "en": "Soil-borne fungi (Botryodiplodia, Fusarium, Rosellinia spp.)."
+    },
+    "vectors": {
+      "fr": "Sol contaminé, eau stagnante, blessures racinaires.",
+      "en": "Contaminated soil, waterlogging, root wounds."
+    },
+    "favorableFactors": {
+      "fr": "Sol mal drainé, fortes pluies, sols compacts, monoculture prolongée.",
+      "en": "Poorly drained soil, heavy rains, compact soils, prolonged monoculture."
+    },
+    "climateConditions": {
+      "fr": "Zones humides avec excès d'eau au niveau racinaire.",
+      "en": "Humid zones with excess water at root level."
+    },
+    "prevention": {
+      "fr": [
+        "Améliorer le drainage.",
+        "Éviter la stagnation d'eau.",
+        "Rotation culturale lorsque possible."
+      ],
+      "en": [
+        "Improve drainage.",
+        "Avoid water stagnation.",
+        "Rotate crops when possible."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Arracher les plants fortement atteints.",
+        "Ne pas utiliser de tubercules pourri comme boutures."
+      ],
+      "en": [
+        "Uproot severely affected plants.",
+        "Do not use rotten tubers as cuttings."
+      ]
+    },
+    "severityLevel": "high",
+    "photoPaths": ["Cultures/Cassava/05-AUTRES MALADIES FONGIQUES/POURRITURE RACINAIRE"],
+    "references": ["Ouvrages/Field problems in cassava.pdf"],
+    "recommendedCaptureTargets": ["root"],
+    "datasetFolder": "05-AUTRES MALADIES FONGIQUES/POURRITURE RACINAIRE",
+    "mlClassId": 5
+  },
+  {
+    "id": "chlorosis",
+    "cropId": "cassava",
+    "category": "nutritional",
+    "scientificName": {
+      "fr": "Chlorose nutritionnelle",
+      "en": "Nutritional chlorosis"
+    },
+    "commonName": {
+      "fr": "Chlorose",
+      "en": "Chlorosis"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles"],
+      "en": ["Leaves", "Leaflets"]
+    },
+    "earlySymptoms": {
+      "fr": "Jaunissement interveinal sur feuilles jeunes ou anciennes selon l'élément déficient.",
+      "en": "Interveinal yellowing on young or old leaves depending on deficient element."
+    },
+    "advancedSymptoms": {
+      "fr": "Pâleur généralisée, croissance ralentie, feuilles réduites.",
+      "en": "Generalized paleness, stunted growth, reduced leaf size."
+    },
+    "causalAgents": {
+      "fr": "Carences en N, P, K, Mg, Fe, Mn ou Zn selon le sol.",
+      "en": "Deficiencies in N, P, K, Mg, Fe, Mn or Zn depending on soil."
+    },
+    "vectors": {
+      "fr": "Non applicable (désordre abiotic/nutritionnel).",
+      "en": "Not applicable (abiotic/nutritional disorder)."
+    },
+    "favorableFactors": {
+      "fr": "Sol pauvre, sols acides ou très lessivés, absence de fertilisation.",
+      "en": "Poor soil, acidic or leached soils, lack of fertilization."
+    },
+    "climateConditions": {
+      "fr": "Pluies intenses lessivant les nutriments, sols exposés sur pentes.",
+      "en": "Heavy rains leaching nutrients, exposed soils on slopes."
+    },
+    "prevention": {
+      "fr": [
+        "Analyser le sol et fertiliser selon les besoins.",
+        "Maintenir la matière organique.",
+        "Utiliser des amendements adaptés."
+      ],
+      "en": [
+        "Analyze soil and fertilize accordingly.",
+        "Maintain organic matter.",
+        "Use appropriate amendments."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Appliquer les engrais recommandés (NPK, Mg, micro-éléments).",
+        "Corriger le pH si nécessaire."
+      ],
+      "en": [
+        "Apply recommended fertilizers (NPK, Mg, micronutrients).",
+        "Correct pH if necessary."
+      ]
+    },
+    "severityLevel": "medium",
+    "photoPaths": ["Cultures/Cassava/05-AUTRES MALADIES FONGIQUES/CHLOROSE"],
+    "references": ["Ouvrages/Save and grow Cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "05-AUTRES MALADIES FONGIQUES/CHLOROSE",
+    "mlClassId": 6
+  },
+  {
+    "id": "leaf_senescence",
+    "cropId": "cassava",
+    "category": "abiotic",
+    "scientificName": {
+      "fr": "Jaunissement lié à la sénescence ou au stress",
+      "en": "Senescence or stress-related yellowing"
+    },
+    "commonName": {
+      "fr": "Jaunissement / vieillesse foliaire",
+      "en": "Leaf yellowing / senescence"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles basales", "Folioles"],
+      "en": ["Lower leaves", "Leaflets"]
+    },
+    "earlySymptoms": {
+      "fr": "Jaunissement progressif des feuilles âgées sans motifs viraux typiques.",
+      "en": "Progressive yellowing of older leaves without typical viral patterns."
+    },
+    "advancedSymptoms": {
+      "fr": "Chute des feuilles sèches, réduction de la surface foliaire active.",
+      "en": "Drop of dry leaves, reduced active leaf area."
+    },
+    "causalAgents": {
+      "fr": "Vieillissement naturel, stress hydrique ou température extrême.",
+      "en": "Natural aging, water stress or extreme temperature."
+    },
+    "vectors": {
+      "fr": "Non applicable.",
+      "en": "Not applicable."
+    },
+    "favorableFactors": {
+      "fr": "Saison sèche prolongée, forte insolation, sol sec en pente.",
+      "en": "Prolonged dry season, intense sun, dry sloping soil."
+    },
+    "climateConditions": {
+      "fr": "Longues périodes ensoleillées et sécheresse.",
+      "en": "Long sunny periods and drought."
+    },
+    "prevention": {
+      "fr": [
+        "Maintenir un paillage si possible.",
+        "Planter en début de saison des pluies.",
+        "Gérer l'ombrage et la densité."
+      ],
+      "en": [
+        "Maintain mulch when possible.",
+        "Plant at start of rainy season.",
+        "Manage shading and density."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Irriguer si disponible en période sèche critique.",
+        "Supprimer les feuilles sèches pour limiter les foyers secondaires."
+      ],
+      "en": [
+        "Irrigate if available during critical dry periods.",
+        "Remove dry leaves to limit secondary issues."
+      ]
+    },
+    "severityLevel": "low",
+    "photoPaths": ["Cultures/Cassava/05-AUTRES MALADIES FONGIQUES/JAUNISSEMENT VIEULLESSE"],
+    "references": ["Ouvrages/Field problems in cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf"],
+    "datasetFolder": "05-AUTRES MALADIES FONGIQUES/JAUNISSEMENT VIEULLESSE",
+    "mlClassId": 7
+  },
+  {
+    "id": "whitefly_infestation",
+    "cropId": "cassava",
+    "category": "pest",
+    "scientificName": {
+      "fr": "Infestation par Bemisia tabaci",
+      "en": "Bemisia tabaci infestation"
+    },
+    "commonName": {
+      "fr": "Mouches blanches",
+      "en": "Whiteflies"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Pousses"],
+      "en": ["Leaves", "Shoots"]
+    },
+    "earlySymptoms": {
+      "fr": "Présence d'insectes blancs au revers des feuilles, miellat collant.",
+      "en": "White insects on leaf undersides, sticky honeydew."
+    },
+    "advancedSymptoms": {
+      "fr": "Fumagine noire, affaiblissement, transmission de viroses (CMD, CBSD).",
+      "en": "Sooty mold, weakening, virus transmission (CMD, CBSD)."
+    },
+    "causalAgents": {
+      "fr": "Bemisia tabaci (Hemiptera: Aleyrodidae).",
+      "en": "Bemisia tabaci (Hemiptera: Aleyrodidae)."
+    },
+    "vectors": {
+      "fr": "Vecteur majeur des viroses du manioc.",
+      "en": "Major vector of cassava viruses."
+    },
+    "favorableFactors": {
+      "fr": "Saison sèche, variétés sensibles, repousses infectées, absence de surveillance.",
+      "en": "Dry season, susceptible varieties, infected regrowth, lack of monitoring."
+    },
+    "climateConditions": {
+      "fr": "Temps chaud et sec.",
+      "en": "Warm and dry weather."
+    },
+    "prevention": {
+      "fr": [
+        "Surveiller régulièrement le revers des feuilles.",
+        "Utiliser des variétés résistantes aux viroses.",
+        "Éliminer les repousses et plants sources."
+      ],
+      "en": [
+        "Regularly monitor leaf undersides.",
+        "Use virus-resistant varieties.",
+        "Remove regrowth and source plants."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Employer les méthodes IPM recommandées localement.",
+        "Favoriser les auxiliaires naturels lorsque possible."
+      ],
+      "en": [
+        "Use locally recommended IPM methods.",
+        "Encourage natural enemies when possible."
+      ]
+    },
+    "severityLevel": "high",
+    "photoPaths": ["Cultures/Cassava/04-RAVAGEURS/RAVAGEURS MINEURS"],
+    "references": ["Ouvrages/Disease-control-IPM-Guide-Cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf"],
+    "datasetFolder": "04-RAVAGEURS/RAVAGEURS MINEURS",
+    "mlClassId": 8
+  },
+  {
+    "id": "mealybug_infestation",
+    "cropId": "cassava",
+    "category": "pest",
+    "scientificName": {
+      "fr": "Infestation par cochenilles farineuses",
+      "en": "Mealybug infestation"
+    },
+    "commonName": {
+      "fr": "Cochenilles",
+      "en": "Mealybugs"
+    },
+    "affectedOrgans": {
+      "fr": ["Tiges", "Racines", "Feuilles"],
+      "en": ["Stems", "Roots", "Leaves"]
+    },
+    "earlySymptoms": {
+      "fr": "Masses cotonneuses blanches sur tiges et racines, affaiblissement local.",
+      "en": "White cottony masses on stems and roots, local weakening."
+    },
+    "advancedSymptoms": {
+      "fr": "Jaunissement, flétrissement, réduction de rendement, fumagine.",
+      "en": "Yellowing, wilting, yield reduction, sooty mold."
+    },
+    "causalAgents": {
+      "fr": "Phenacoccus manihoti et autres cochenilles du manioc.",
+      "en": "Phenacoccus manihoti and other cassava mealybugs."
+    },
+    "vectors": {
+      "fr": "Non applicable directement aux viroses majeures.",
+      "en": "Not a direct vector of major cassava viruses."
+    },
+    "favorableFactors": {
+      "fr": "Saison sèche, sols légers, absence de contrôle biologique.",
+      "en": "Dry season, light soils, lack of biological control."
+    },
+    "climateConditions": {
+      "fr": "Conditions chaudes et relativement sèches.",
+      "en": "Warm and relatively dry conditions."
+    },
+    "prevention": {
+      "fr": [
+        "Introduire ou conserver les auxiliaires (Epidinocarsis lopezi).",
+        "Inspecter boutures et plants avant plantation."
+      ],
+      "en": [
+        "Introduce or conserve natural enemies (Epidinocarsis lopezi).",
+        "Inspect cuttings and plants before planting."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Retirer les parties fortement colonisées.",
+        "Appliquer les mesures IPM locales validées."
+      ],
+      "en": [
+        "Remove heavily colonized parts.",
+        "Apply validated local IPM measures."
+      ]
+    },
+    "severityLevel": "high",
+    "photoPaths": ["Cultures/Cassava/04-RAVAGEURS/RAVAGEURS MAJEURS"],
+    "references": ["Ouvrages/Disease-control-IPM-Guide-Cassava.pdf"],
+    "recommendedCaptureTargets": ["stem", "root", "leaf"],
+    "datasetFolder": "04-RAVAGEURS/RAVAGEURS MAJEURS",
+    "mlClassId": 9
+  },
+  {
+    "id": "mite_infestation",
+    "cropId": "cassava",
+    "category": "pest",
+    "scientificName": {
+      "fr": "Acariose du manioc",
+      "en": "Cassava mite damage"
+    },
+    "commonName": {
+      "fr": "Acariens / araignées rouges",
+      "en": "Mites / red spider mites"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles"],
+      "en": ["Leaves", "Leaflets"]
+    },
+    "earlySymptoms": {
+      "fr": "Piqures chlorotiques, bronzage du feuillage, toiles fines au revers.",
+      "en": "Chlorotic stippling, bronzing foliage, fine webbing underneath."
+    },
+    "advancedSymptoms": {
+      "fr": "Dessèchement foliaire, chute prématurée, baisse de photosynthèse.",
+      "en": "Leaf desiccation, premature drop, reduced photosynthesis."
+    },
+    "causalAgents": {
+      "fr": "Acariens (Mononychellus tanajoa, Tetranychus spp.).",
+      "en": "Mites (Mononychellus tanajoa, Tetranychus spp.)."
+    },
+    "vectors": {
+      "fr": "Non applicable.",
+      "en": "Not applicable."
+    },
+    "favorableFactors": {
+      "fr": "Saison sèche, faible humidité, variétés sensibles.",
+      "en": "Dry season, low humidity, susceptible varieties."
+    },
+    "climateConditions": {
+      "fr": "Longues périodes ensoleillées et sécheresse.",
+      "en": "Long sunny periods and drought."
+    },
+    "prevention": {
+      "fr": [
+        "Maintenir une bonne humidité relative si possible.",
+        "Surveiller en saison sèche."
+      ],
+      "en": [
+        "Maintain adequate humidity when possible.",
+        "Monitor during dry season."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Utiliser les acaricides ou méthodes biologiques recommandés localement.",
+        "Retirer les feuilles très infestées."
+      ],
+      "en": [
+        "Use locally recommended acaricides or biological methods.",
+        "Remove heavily infested leaves."
+      ]
+    },
+    "severityLevel": "medium",
+    "photoPaths": ["Cultures/Cassava/04-RAVAGEURS/ACARIOSE", "Cultures/Cassava/04-RAVAGEURS/ACARIEN ARAIGNE"],
+    "references": ["Ouvrages/Disease-control-IPM-Guide-Cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "04-RAVAGEURS/ACARIOSE",
+    "mlClassId": 10
+  },
+  {
+    "id": "thrips_damage",
+    "cropId": "cassava",
+    "category": "pest",
+    "scientificName": {
+      "fr": "Dégâts de thrips",
+      "en": "Thrips damage"
+    },
+    "commonName": {
+      "fr": "Thrips",
+      "en": "Thrips"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Pousses", "Bourgeons"],
+      "en": ["Leaves", "Shoots", "Buds"]
+    },
+    "earlySymptoms": {
+      "fr": "Décoloration argentée, piqures, déformation légère des jeunes feuilles.",
+      "en": "Silvery discoloration, punctures, slight distortion of young leaves."
+    },
+    "advancedSymptoms": {
+      "fr": "Croissance ralentie des pousses, feuilles fripées, perte de vigueur.",
+      "en": "Stunted shoot growth, curled leaves, loss of vigor."
+    },
+    "causalAgents": {
+      "fr": "Thrips spp., Helopeltis spp. (punaises associées aux dégats similaires).",
+      "en": "Thrips spp., Helopeltis spp. (associated bugs causing similar damage)."
+    },
+    "vectors": {
+      "fr": "Non applicable aux viroses majeures.",
+      "en": "Not applicable to major viruses."
+    },
+    "favorableFactors": {
+      "fr": "Pousses tendres, stress hydrique, absence de surveillance.",
+      "en": "Tender shoots, water stress, lack of monitoring."
+    },
+    "climateConditions": {
+      "fr": "Saison sèche avec jeunes repousses.",
+      "en": "Dry season with young flushes."
+    },
+    "prevention": {
+      "fr": [
+        "Surveiller les jeunes pousses.",
+        "Maintenir une bonne fertilisation et humidité."
+      ],
+      "en": [
+        "Monitor young shoots.",
+        "Maintain good fertilization and moisture."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Appliquer les mesures IPM locales.",
+        "Retirer les parties très endommagées."
+      ],
+      "en": [
+        "Apply local IPM measures.",
+        "Remove severely damaged parts."
+      ]
+    },
+    "severityLevel": "medium",
+    "photoPaths": ["Cultures/Cassava/04-RAVAGEURS/RAVAGEURS EMERGENTS"],
+    "references": ["Ouvrages/Disease-control-IPM-Guide-Cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "04-RAVAGEURS/RAVAGEURS EMERGENTS",
+    "mlClassId": 11
+  },
+  {
+    "id": "healthy",
+    "cropId": "cassava",
+    "category": "healthy",
+    "scientificName": {
+      "fr": "Plante saine",
+      "en": "Healthy plant"
+    },
+    "commonName": {
+      "fr": "Feuilles saines",
+      "en": "Healthy leaves"
+    },
+    "affectedOrgans": {
+      "fr": ["Feuilles", "Folioles", "Tiges", "Racines"],
+      "en": ["Leaves", "Leaflets", "Stems", "Roots"]
+    },
+    "earlySymptoms": {
+      "fr": "Feuillage vert uniforme, croissance vigoureuse, absence de lésions.",
+      "en": "Uniform green foliage, vigorous growth, no lesions."
+    },
+    "advancedSymptoms": {
+      "fr": "Développement normal, pas de déformation ni nécrose.",
+      "en": "Normal development, no deformation or necrosis."
+    },
+    "causalAgents": {
+      "fr": "Aucun agent pathogène détecté.",
+      "en": "No pathogenic agent detected."
+    },
+    "vectors": {
+      "fr": "Non applicable.",
+      "en": "Not applicable."
+    },
+    "favorableFactors": {
+      "fr": "Bonne gestion agronomique, boutures saines, sol fertile.",
+      "en": "Good agronomic management, healthy cuttings, fertile soil."
+    },
+    "climateConditions": {
+      "fr": "Conditions culturales favorables sans stress majeur.",
+      "en": "Favorable growing conditions without major stress."
+    },
+    "prevention": {
+      "fr": [
+        "Continuer les bonnes pratiques agronomiques.",
+        "Surveiller régulièrement la parcelle."
+      ],
+      "en": [
+        "Continue good agronomic practices.",
+        "Monitor the field regularly."
+      ]
+    },
+    "control": {
+      "fr": [
+        "Aucune mesure curative nécessaire.",
+        "Maintenir fertilisation et prophylaxie."
+      ],
+      "en": [
+        "No curative measure required.",
+        "Maintain fertilization and preventive care."
+      ]
+    },
+    "severityLevel": "low",
+    "photoPaths": ["Cultures/Cassava/06-FEUILLES SAINES"],
+    "references": ["Ouvrages/Save and grow Cassava.pdf"],
+    "recommendedCaptureTargets": ["leaf", "leaflet"],
+    "datasetFolder": "06-FEUILLES SAINES",
+    "mlClassId": 12
+  }
+]
