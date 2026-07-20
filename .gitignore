@@ -5,8 +5,9 @@ __pycache__/
 venv/
 ml/artifacts/
 
-# Local training imagery (keep on disk only — not published)
+# Local training imagery and internal references (not published)
 Cultures/
+Ouvrages/
 
 # Flutter / Dart
 app/.dart_tool/

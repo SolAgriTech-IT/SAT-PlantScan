@@ -21,13 +21,12 @@ SAT-PlantScan/
 ├── knowledge_base/       # Normalized crop/disease JSON knowledge
 ├── ml/                   # Dataset prep, training, TFLite export
 ├── releases/             # Pre-built Android APK for direct install
-├── Ouvrages/             # Scientific reference documents
 ├── docs/                 # Technical documentation
 ├── Logo.jpg              # Official SolAgriTech logo
 └── scripts/              # Setup utilities
 ```
 
-> **Training images:** the `Cultures/` tree stays **local only** (gitignored). Clone the repo for app + knowledge base; keep `Cultures/` on your machine for ML training (`ml/scripts/prepare_dataset.py`).
+> **Local-only data:** `Cultures/` (training images) and `Ouvrages/` (reference PDFs) are **gitignored** and not on GitHub. Keep them on your machine for ML training and internal use.
 
 ## Install on your Android phone
 
@@ -136,8 +135,10 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Scientific references
 
-- `/Ouvrages` (FAO, IPM guides, cassava field manuals)
+- FAO cassava disease resources (see links in `knowledge_base/` disease sheets)
 - [FAO Cassava diseases](https://www.fao.org/agriculture/crops/thematic-sitemap/theme/pests/cassava-diseases/en/)
+
+Local PDF manuals can be stored in a gitignored `Ouvrages/` folder on your workstation.
 
 ## Contributing
 
