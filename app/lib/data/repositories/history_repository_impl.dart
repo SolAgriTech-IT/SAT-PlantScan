@@ -7,12 +7,23 @@ class HistoryRepositoryImpl implements HistoryRepository {
 
   final HistoryLocalDataSource _dataSource;
 
-  @override
-  Future<void> clear() => _dataSource.clear();
+  Future<void> _ensureReady() => _dataSource.init();
 
   @override
-  Future<List<DiagnosisRecord>> getAll() => _dataSource.loadAll();
+  Future<void> clear() async {
+    await _ensureReady();
+    return _dataSource.clear();
+  }
 
   @override
-  Future<void> save(DiagnosisRecord record) => _dataSource.save(record);
+  Future<List<DiagnosisRecord>> getAll() async {
+    await _ensureReady();
+    return _dataSource.loadAll();
+  }
+
+  @override
+  Future<void> save(DiagnosisRecord record) async {
+    await _ensureReady();
+    return _dataSource.save(record);
+  }
 }

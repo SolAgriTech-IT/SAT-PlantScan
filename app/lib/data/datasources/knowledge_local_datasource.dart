@@ -5,14 +5,57 @@ import 'package:flutter/services.dart';
 import '../../domain/entities/entities.dart';
 import '../../core/utils/localized_text.dart';
 
+class KnowledgeBundle {
+  KnowledgeBundle({required this.questionnaire, required this.diseases});
+
+  final Questionnaire questionnaire;
+  final List<Disease> diseases;
+}
+
 class KnowledgeLocalDataSource {
   static const _cropManifestAsset = 'assets/knowledge/crops/cassava/manifest.json';
   static const _diseasesAsset = 'assets/knowledge/crops/cassava/diseases.json';
   static const _questionnaireAsset = 'assets/knowledge/crops/cassava/questionnaire.json';
 
+  List<Crop>? _cropsCache;
+  Map<String, List<Disease>>? _diseasesCache;
+  Map<String, Questionnaire>? _questionnaireCache;
+
+  bool get isWarm =>
+      _cropsCache != null &&
+      _diseasesCache != null &&
+      _questionnaireCache != null;
+
+  List<Crop> get cachedCrops {
+    final crops = _cropsCache;
+    if (crops == null) {
+      throw StateError('Knowledge base not loaded');
+    }
+    return crops;
+  }
+
+  KnowledgeBundle? bundleForCrop(String cropId) {
+    if (!isWarm) return null;
+    final questionnaire = _questionnaireCache![cropId];
+    final diseases = _diseasesCache![cropId];
+    if (questionnaire == null || diseases == null) return null;
+    return KnowledgeBundle(questionnaire: questionnaire, diseases: diseases);
+  }
+
+  Future<void> warmUp() async {
+    final crops = await loadCrops();
+    if (crops.isEmpty) {
+      throw StateError('Aucune culture disponible dans la base de connaissances.');
+    }
+    await loadDiseases(crops.first.id);
+    await loadQuestionnaire(crops.first.id);
+  }
+
   Future<List<Crop>> loadCrops() async {
+    if (_cropsCache != null) return _cropsCache!;
     final manifest = await _loadJson(_cropManifestAsset);
-    return [_mapCrop(manifest as Map<String, dynamic>)];
+    _cropsCache = [_mapCrop(manifest as Map<String, dynamic>)];
+    return _cropsCache!;
   }
 
   Future<Crop> loadCrop(String cropId) async {
@@ -21,12 +64,21 @@ class KnowledgeLocalDataSource {
   }
 
   Future<List<Disease>> loadDiseases(String cropId) async {
+    _diseasesCache ??= {};
+    if (_diseasesCache!.containsKey(cropId)) {
+      return _diseasesCache![cropId]!;
+    }
     final raw = await _loadJsonList(_diseasesAsset);
-    return raw
+    final diseases = raw
         .cast<Map<String, dynamic>>()
         .where((item) => item['cropId'] == cropId)
         .map(_mapDisease)
         .toList();
+    if (diseases.isEmpty) {
+      throw StateError('Fiches maladies introuvables pour $cropId');
+    }
+    _diseasesCache![cropId] = diseases;
+    return diseases;
   }
 
   Future<Disease> loadDisease(String cropId, String diseaseId) async {
@@ -35,11 +87,15 @@ class KnowledgeLocalDataSource {
   }
 
   Future<Questionnaire> loadQuestionnaire(String cropId) async {
+    _questionnaireCache ??= {};
+    if (_questionnaireCache!.containsKey(cropId)) {
+      return _questionnaireCache![cropId]!;
+    }
     final raw = await _loadJson(_questionnaireAsset) as Map<String, dynamic>;
     if (raw['cropId'] != cropId) {
       throw StateError('Questionnaire not found for crop $cropId');
     }
-    return Questionnaire(
+    final questionnaire = Questionnaire(
       cropId: cropId,
       initialScore: (raw['initialScore'] as num).toDouble(),
       questions: (raw['questions'] as List<dynamic>)
@@ -65,6 +121,8 @@ class KnowledgeLocalDataSource {
           )
           .toList(),
     );
+    _questionnaireCache![cropId] = questionnaire;
+    return questionnaire;
   }
 
   Crop _mapCrop(Map<String, dynamic> json) {
@@ -115,12 +173,20 @@ class KnowledgeLocalDataSource {
   }
 
   Future<dynamic> _loadJson(String assetPath) async {
-    final content = await rootBundle.loadString(assetPath);
-    return jsonDecode(content);
+    try {
+      final content = await rootBundle.loadString(assetPath);
+      return jsonDecode(content);
+    } catch (error) {
+      throw StateError('Asset JSON introuvable: $assetPath ($error)');
+    }
   }
 
   Future<List<dynamic>> _loadJsonList(String assetPath) async {
-    final content = await rootBundle.loadString(assetPath);
-    return jsonDecode(content) as List<dynamic>;
+    try {
+      final content = await rootBundle.loadString(assetPath);
+      return jsonDecode(content) as List<dynamic>;
+    } catch (error) {
+      throw StateError('Asset JSON introuvable: $assetPath ($error)');
+    }
   }
 }

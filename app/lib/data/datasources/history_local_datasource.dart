@@ -6,10 +6,16 @@ import '../../domain/entities/entities.dart';
 
 class HistoryLocalDataSource {
   static const _boxName = 'diagnosis_history';
+  static bool _hiveReady = false;
 
   Future<void> init() async {
-    await Hive.initFlutter();
-    await Hive.openBox<String>(_boxName);
+    if (!_hiveReady) {
+      await Hive.initFlutter();
+      _hiveReady = true;
+    }
+    if (!Hive.isBoxOpen(_boxName)) {
+      await Hive.openBox<String>(_boxName);
+    }
   }
 
   Box<String> get _box => Hive.box<String>(_boxName);

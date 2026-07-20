@@ -19,7 +19,6 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   path_provider: ^2.1.4
-  camera: ^0.11.0+2
   image_picker: ^1.1.2
   image: ^4.2.0
   tflite_flutter: ^0.11.0
@@ -45,6 +44,9 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets/logo/
-    - assets/knowledge/crops/
-    - assets/models/
+    - assets/logo/logo.jpg
+    - assets/knowledge/crops/cassava/manifest.json
+    - assets/knowledge/crops/cassava/diseases.json
+    - assets/knowledge/crops/cassava/questionnaire.json
+    - assets/models/labels.txt
+    - assets/models/README.md

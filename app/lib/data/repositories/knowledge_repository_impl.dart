@@ -7,6 +7,14 @@ class KnowledgeRepositoryImpl implements KnowledgeRepository {
 
   final KnowledgeLocalDataSource _dataSource;
 
+  Future<void> warmUp() => _dataSource.warmUp();
+
+  bool get isWarm => _dataSource.isWarm;
+
+  List<Crop> get cachedCrops => _dataSource.cachedCrops;
+
+  KnowledgeBundle? bundleForCrop(String cropId) => _dataSource.bundleForCrop(cropId);
+
   @override
   Future<List<Crop>> getAvailableCrops() => _dataSource.loadCrops();
 

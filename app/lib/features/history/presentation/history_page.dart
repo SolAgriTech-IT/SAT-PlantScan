@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/di/app_locator.dart';
+import '../../../core/widgets/async_content.dart';
 import '../../../l10n/app_localizations.dart';
 
 class HistoryPage extends StatefulWidget {
@@ -36,18 +37,19 @@ class _HistoryPageState extends State<HistoryPage> {
     return items;
   }
 
+  void _retry() {
+    setState(() => _future = _load());
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(title: Text(l10n.historyTitle)),
-      body: FutureBuilder<List<_HistoryItem>>(
+      body: AsyncContent<List<_HistoryItem>>(
         future: _future,
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          final items = snapshot.data!;
+        onRetry: _retry,
+        builder: (context, items) {
           if (items.isEmpty) {
             return Center(child: Text(l10n.noHistory));
           }

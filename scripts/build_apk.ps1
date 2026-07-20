@@ -2,6 +2,7 @@
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $PSScriptRoot
 $App = Join-Path $Root "app"
+$env:PUB_CACHE = Join-Path (Split-Path $Root -Parent) ".pub-cache"
 $FlutterCandidates = @(
     "D:\New_Start_2024\Candidatures\SOL_AGRI_TECH\tools\flutter\bin\flutter.bat",
     "$env:LOCALAPPDATA\flutter\bin\flutter.bat",

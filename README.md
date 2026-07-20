@@ -20,12 +20,39 @@ SAT-PlantScan/
 ├── app/                  # Flutter mobile application (Android + iOS)
 ├── knowledge_base/       # Normalized crop/disease JSON knowledge
 ├── ml/                   # Dataset prep, training, TFLite export
-├── Cultures/             # Training images organized by crop/disease
+├── releases/             # Pre-built Android APK for direct install
 ├── Ouvrages/             # Scientific reference documents
 ├── docs/                 # Technical documentation
 ├── Logo.jpg              # Official SolAgriTech logo
 └── scripts/              # Setup utilities
 ```
+
+> **Training images:** the `Cultures/` tree stays **local only** (gitignored). Clone the repo for app + knowledge base; keep `Cultures/` on your machine for ML training (`ml/scripts/prepare_dataset.py`).
+
+## Install on your Android phone
+
+### Option A — Download from GitHub (recommended)
+
+1. On your phone or PC, open this repository on GitHub.
+2. Go to **`releases/SAT-PlantScan-android-release.apk`** (or download the latest APK from the `releases/` folder).
+3. Transfer the file to the phone if you downloaded it on PC (USB, cloud, email).
+4. On the phone, open the APK file.
+5. If Android asks, allow **Install unknown apps** for your browser or file manager (Settings → Security / Apps).
+6. Confirm installation, then open **SAT-PlantScan**.
+
+### Option B — USB (`adb`)
+
+With [Android platform tools](https://developer.android.com/tools/releases/platform-tools) and USB debugging enabled:
+
+```powershell
+adb install -r releases\SAT-PlantScan-android-release.apk
+```
+
+### Option C — Build yourself
+
+See [docs/BUILD_APK.md](docs/BUILD_APK.md) and run `.\scripts\build_apk.ps1`. Output: `app/build/app/outputs/flutter-apk/app-release.apk`.
+
+**Requirements:** Android 7.0+ (API 24+ recommended). Camera and storage permissions are requested when you capture photos for diagnosis.
 
 ## Quick start — mobile app
 
@@ -62,6 +89,8 @@ See the full guide: **[docs/BUILD_APK.md](docs/BUILD_APK.md)**
 
 `app/build/app/outputs/flutter-apk/app-release.apk`
 
+A copy for end users is kept at **`releases/SAT-PlantScan-android-release.apk`** (see [Install on your Android phone](#install-on-your-android-phone)).
+
 Open **`app/`** as the project root in Android Studio. Set `android/local.properties`:
 
 ```properties
@@ -97,7 +126,7 @@ This exports `sat_plantscan_cassava.tflite` into `app/assets/models/`.
 
 ## Adding a new crop
 
-1. Create `Cultures/<Crop>/` using the standard taxonomy (Diseases, Pests, Nutritional, Abiotic, Healthy)
+1. Add local training images under `Cultures/<Crop>/` (not committed to Git)
 2. Add JSON under `knowledge_base/crops/<crop_id>/`
 3. Register in `knowledge_base/crops/registry.json`
 4. Sync assets to `app/assets/knowledge/crops/<crop_id>/`

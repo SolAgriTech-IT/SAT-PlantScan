@@ -10,30 +10,34 @@ final GlobalKey<SatPlantScanAppState> satAppKey = GlobalKey<SatPlantScanAppState
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AppLocator.instance.init();
-  runApp(SatPlantScanApp(key: satAppKey));
+  String? initError;
+  try {
+    await AppLocator.instance.init();
+  } catch (error) {
+    initError = error.toString();
+  }
+  runApp(SatPlantScanApp(key: satAppKey, initError: initError));
 }
 
 class SatPlantScanApp extends StatefulWidget {
-  const SatPlantScanApp({super.key});
+  const SatPlantScanApp({super.key, this.initError});
+
+  final String? initError;
 
   @override
   State<SatPlantScanApp> createState() => SatPlantScanAppState();
 }
 
 class SatPlantScanAppState extends State<SatPlantScanApp> {
-  Locale _locale = const Locale('fr');
+  late Locale _locale = Locale(AppLocator.instance.cachedLanguageCode);
   late final _router = AppRouter.create();
 
   @override
   void initState() {
     super.initState();
-    _loadLocale();
-  }
-
-  Future<void> _loadLocale() async {
-    final code = await settingsRepo.getLanguageCode();
-    setState(() => _locale = Locale(code));
+    if (widget.initError == null && AppLocator.instance.isInitialized) {
+      _locale = Locale(AppLocator.instance.cachedLanguageCode);
+    }
   }
 
   void setLocale(Locale locale) {
@@ -42,6 +46,22 @@ class SatPlantScanAppState extends State<SatPlantScanApp> {
 
   @override
   Widget build(BuildContext context) {
+    if (widget.initError != null) {
+      return MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Text(
+                'Erreur au démarrage:\n${widget.initError}',
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
+        ),
+      );
+    }
+
     return MaterialApp.router(
       title: 'SAT-PlantScan',
       theme: AppTheme.light(),

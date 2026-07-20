@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/di/app_locator.dart';
+import '../../../core/widgets/async_content.dart';
 import '../../../domain/entities/entities.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -42,17 +43,18 @@ class _DiseaseDetailPageState extends State<DiseaseDetailPage> {
     }
   }
 
+  void _retry() {
+    setState(() => _future = _load());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Fiche maladie / Disease sheet')),
-      body: FutureBuilder<_DetailViewModel>(
+      body: AsyncContent<_DetailViewModel>(
         future: _future,
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          final data = snapshot.data!;
+        onRetry: _retry,
+        builder: (context, data) {
           final disease = data.disease;
           final l10n = AppLocalizations.of(context)!;
           return ListView(
